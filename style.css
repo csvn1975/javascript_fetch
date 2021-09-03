@@ -1,0 +1,118 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+.center{
+    /* position */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* display */
+    padding: 3rem;
+    max-height: 90vh;
+    box-shadow: 1px 1px 5px 5px rgba(0,0,0,.1);
+  
+}
+
+.scroll-y {
+    overflow-y: scroll;
+}
+
+.form-group{
+    /* display: flex;
+    justify-content: flex-start;
+    flex-direction: column; */
+    width:  300px;
+}
+
+.form-group > label {
+   display:inline-block;
+   font-weight: 400;
+   margin-bottom: 10px;
+}
+
+.form-control{
+    display:block;
+    width:  inherit;
+    padding: 8px 16px;
+    outline: none;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-danger {
+    background-color: #DC3545;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #167BFF;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28A744;
+    color: white;
+}
+
+.btn-ms{
+  padding: 3px 5px;  
+  font-size: 0.75rem;
+  font-weight: 300;
+  border-radius: 2px;
+}
+
+.mt5 {
+ margin-top: 5px;
+}
+
+.mb5 {
+ margin-bottom: 5px;
+}
+
+.m1 {
+ margin: 4px 0;
+}
+
+.ml1{
+    margin-left: 5px;
+}
+
+.mr{
+    margin-right: 5px;
+}
+
+.float-right{
+    float: right;
+}

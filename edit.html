@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Fetch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadUser()">
+    <div class="center">
+        <h1 class="title">Editing</h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="user">username</label>
+                <input type="text" name="user" id="user" class="form-control" placeholder="Enter your name">
+                <input type="hidden" name="id" id="id" class="form-control" placeholder="update_id">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success mt5" onclick="saveUser()">Update user</button>
+                <button type="button" class="btn btn-danger mt5" onclick= "window.location='index.html'">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        var userElement = document.getElementById('user');
+        var emailElement = document.getElementById('email');
+        var userID = document.getElementById('id');
+
+        function loadUser() {
+            var urlParam = new URLSearchParams(window.location.search);
+            console.log(urlParam);
+            var id = urlParam.get('id');
+            let url = reqURL + '/' + id;
+
+            fetch(url)
+                .then(resp => {
+                    if (resp.status === 200)
+                        return resp.json()
+                })
+                .then(data => {
+                    userElement.value = data.name;
+                    emailElement.value = data.email;
+                    userID.value = data.id;
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .then(() => {
+                    console.log('always executed');
+                });
+        }
+
+        function saveUser() {
+            updateData({
+                "name": userElement.value,
+                "email": emailElement.value,
+                "id": userID.value
+            })
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Fetch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center scroll-y">
+        <h1 class="title">Users list from mockapi.io </h1>
+        <button id="addUser" class="btn btn-primary mb5" onclick= "window.location='add.html'">Add new user</button>
+        <ul id="target">
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script> loadUserList()</script>
+</body>
+
+</html>
