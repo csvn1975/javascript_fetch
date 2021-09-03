@@ -1,5 +1,4 @@
 
-//var reqURL = "https://jsonplaceholder.typicode.com/posts";
 const reqURL = "https://5f44f2df3fb92f0016754178.mockapi.io/user";
 
 function loadUserList() {
